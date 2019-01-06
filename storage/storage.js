@@ -27,6 +27,15 @@ if (window.File && window.FileList && window.FileReader) {
         e.preventDefault();
         var files = e.target.files || e.dataTransfer.files;
         for (var i = 0; i < files.length; i++) {
+            $.ajax({
+                url : 'upload.php',
+                type : 'POST',
+                data : 'file='+files[i],
+                async: false,
+                success : function(result){
+                    console.log(result)
+                }
+            });
             var eachFile = files[i],
                 type = eachFile.type == "" || eachFile.type == null
                     ? eachFile.name.split(".")[1]
@@ -135,26 +144,16 @@ $(document).ready(function () {
     });
     var eLfolderindex;
     // WARNING : Drag everytime up and break all other drag file
-    var draggieWindow = $(".folder-content").draggabilly();
-    draggieWindow.on("dragStart", function (event, pointer) {
-        (zIndex = $(".folder-content")
-            .map(function () {
-                return $(this).css("z-index");
-            })
-            .get()), (currentzIndex = Math.max.apply(null, zIndex));
-        $(this).css({
-            display: "block",
-            "z-index": currentzIndex + 1
-        });
-    });
+    var draggieWindow = $(".folder-content").draggable({disabled: false});
+
     $(".folder-content").resizable({
         minWidth: 250,
         minHeight: 150,
         start: function (event, ui) {
-            $(".folder-content").draggabilly("disable");
+            $(".folder-content").draggable("option","disabled", false);
         },
         stop: function (event, ui) {
-            $(".folder-content").draggabilly("enable");
+            $(".folder-content").draggable("option","disabled", true);
         }
     });
     $(".top-droppable").topDroppable({
@@ -209,7 +208,7 @@ function dragTheFiles() {
         $(".file").draggable({
             revert: true,
             start: function () {
-                $(".folder-content").draggabilly("disable");
+                $(".folder-content").draggable("option","disabled", true);
                 $(".folder").css({
                     "background-color": "rgba(0,0,0,0.05)"
                 });
@@ -218,7 +217,7 @@ function dragTheFiles() {
                 });
             },
             stop: function () {
-                $(".folder-content").draggabilly("enable");
+                $(".folder-content").draggable("option","disabled", false);
                 $(".folder").css({
                     "background-color": "rgba(0,0,0,0)"
                 });
