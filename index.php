@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login</title>
+    <title>Connexion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
@@ -36,12 +36,12 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 
 <div class="wrapper">
 	<div class="container">
-		<h1>Welcome</h1>
+		<h1>Bienvenue</h1>
 		
 		<form class="form" action='/' method="post">
-			<input name='username' type="text" placeholder="Username">
-			<input name='password' type="password" placeholder="Password">
-			<button type="submit" id="login-button">Login</button>
+			<input name='username' type="text" placeholder="Identifiant">
+			<input name='password' type="password" placeholder="Mot de passe">
+			<button type="submit" id="login-button">Connexion</button>
 		</form>
 	</div>
 	
