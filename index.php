@@ -16,15 +16,16 @@ if(isset($_GET['disconnect']) && $_GET['disconnect'] == 1){
 }
 
 if(isset($_SESSION['user']) && $_SESSION['user'] != ""){
-    header('Location: storage/');
+    header('Location: ./storage/index.html');
     exit;
 }
 
 if(isset($_POST['username']) && isset($_POST['password'])){
+	var_dump("ok");
     foreach ($loginList as $username => $password) {
         if($_POST['username'] == $username && $_POST['password'] == $password){
             $_SESSION['user'] = $_POST['username'];
-            header('Location: storage/');
+            header('Location: ./storage/index.html');
             exit;
         }
     }
@@ -38,7 +39,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 	<div class="container">
 		<h1>Bienvenue</h1>
 		
-		<form class="form" action='/' method="post">
+		<form class="form" action='./index.php' method="post">
 			<input name='username' type="text" placeholder="Identifiant">
 			<input name='password' type="password" placeholder="Mot de passe">
 			<button type="submit" id="login-button">Connexion</button>
