@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13fa0468-94b7-46f7-b454-d3c9cdd01136" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/storage/config/image.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/config/image.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/storage/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/storage/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/js/autoloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/storage/js/autoloader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/storage/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/js/map.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/upload.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage/config/image.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="128">
-              <caret line="8" column="5" selection-end-line="10" selection-end-column="1" />
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -68,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/storage/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+            <state relative-caret-position="475">
+              <caret line="36" column="37" selection-end-line="52" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -90,9 +84,9 @@
         <option value="$PROJECT_DIR$/storage/css/main.css" />
         <option value="$PROJECT_DIR$/storage/content.html" />
         <option value="$PROJECT_DIR$/storage/js/main.js" />
-        <option value="$PROJECT_DIR$/storage/upload.php" />
         <option value="$PROJECT_DIR$/storage/js/upload.js" />
         <option value="$PROJECT_DIR$/storage/config/image.json" />
+        <option value="$PROJECT_DIR$/storage/upload.php" />
       </list>
     </option>
   </component>
@@ -118,24 +112,6 @@
               <item name="storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -178,12 +154,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575981390724</updated>
-      <workItem from="1575981391863" duration="8086000" />
+      <workItem from="1575981391863" duration="8346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8086000" />
+    <option name="totallyTimeSpent" value="8346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -260,13 +236,6 @@
     <entry file="file://$PROJECT_DIR$/storage/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -284,7 +253,14 @@
     <entry file="file://$PROJECT_DIR$/storage/config/image.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
-          <caret line="8" column="5" selection-end-line="10" selection-end-column="1" />
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="36" column="37" selection-end-line="52" selection-end-column="7" />
         </state>
       </provider>
     </entry>
