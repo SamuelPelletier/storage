@@ -47,4 +47,4 @@ $.getScript("js/mail-script.js");
 $.getScript("js/theme.js");
 $.getScript("js/gallery.js");
 $.getScript("js/main.js");
-$.getScript("js/map.js");
+$.getScript("js/upload.js");

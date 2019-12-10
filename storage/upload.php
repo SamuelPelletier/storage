@@ -12,35 +12,39 @@
 <div w3-include-html="menu.html"></div>
 <div w3-include-html="small-banner.html"></div>
 <div id="content">
-    <?php 
-if(isset($_POST['submit'])){
- 
- // Count total files
- $countfiles = count($_FILES['file']['name']);
+    <?php
+    if (isset($_POST['submit'])) {
+        // Count total files
+        $countfiles = count($_FILES['file']['name']);
 
- // Looping all files
- for($i=0;$i<$countfiles;$i++){
-  $filename = $_FILES['file']['name'][$i];
- 
-  // Upload file
-  if(move_uploaded_file($_FILES['file']['tmp_name'][$i],'img/gallery/'.$filename)){
-    $jsonString = file_get_contents('config/image.json');
-    $data = json_decode($jsonString, true);
+        // Looping all files
+        for ($i = 0; $i < $countfiles; $i++) {
+            $filename = $_FILES['file']['name'][$i];
 
-    array_push($data['images'], ['title'=>"bob","url"=>'img/gallery/'.$filename,'tags'=>['1']]);
+            // Upload file
+            if (move_uploaded_file($_FILES['file']['tmp_name'][$i], 'img/gallery/' . $filename)) {
+                $jsonString = file_get_contents('config/image.json');
+                $data = json_decode($jsonString, true);
 
-    $newJsonString = json_encode($data);
-    file_put_contents('config/image.json', $newJsonString);
-  }
- 
- }
-} 
-?>
-<form method='post' action='' enctype='multipart/form-data'>
- <input type="file" name="file[]" id="file" multiple>
+                array_push($data['images'],
+                    [
+                        'title' => $_POST['title' . $i],
+                        "url" => 'img/gallery/' . $filename,
+                        'tags' => $_POST['tags' . $i]
+                    ]);
 
- <input type='submit' name='submit' value='Upload'>
-</form>
+                $newJsonString = json_encode($data);
+                file_put_contents('config/image.json', $newJsonString);
+            }
+
+        }
+    }
+    ?>
+    <form id='upload-form' method='post' action='./upload.php' enctype='multipart/form-data'>
+        <input type="file" name="file[]" id="file" multiple accept=".gif,.jpg,.jpeg,.png">
+
+        <input type='submit' name='submit' value='Suivant'>
+    </form>
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>

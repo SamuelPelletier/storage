@@ -19,3 +19,28 @@
     height: 80px !important;
     min-height: 0 !important;
 }
+
+.image-preview {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+#upload-form {
+    padding-top: 10px;
+}
+
+#upload-form > div {
+    padding: 10px;
+}
+
+#upload-form input {
+    padding-left: 10px;
+}
+
+#upload-form p {
+    padding-right: 10px;
+}
+
+#upload-form .col-10 .row {
+    padding: 10px;
+}

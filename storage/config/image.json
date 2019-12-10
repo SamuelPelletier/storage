@@ -1,1 +1,11 @@
-{"images":[{"title":"bob","url":"img\/gallery\/pixiz-30-05-2019-15-19-59.jpg","tags":["1"]}]}
+{
+  "images": [
+    {
+      "title": "bob",
+      "url": "img\/gallery\/pixiz-30-05-2019-15-19-59.jpg",
+      "tags": [
+        "1"
+      ]
+    }
+  ]
+}
