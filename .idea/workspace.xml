@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13fa0468-94b7-46f7-b454-d3c9cdd01136" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="20" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="32">
+              <caret line="2" column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -124,6 +122,12 @@
               <item name="storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="storage" type="b2602c69:ProjectViewProjectNode" />
@@ -180,12 +184,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575981390724</updated>
       <workItem from="1575981391863" duration="8698000" />
-      <workItem from="1576147640566" duration="140000" />
+      <workItem from="1576147640566" duration="280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8838000" />
+    <option name="totallyTimeSpent" value="8978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -290,10 +294,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="20" selection-end-line="1" selection-end-column="20" />
+        <state relative-caret-position="32">
+          <caret line="2" column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
