@@ -14,6 +14,8 @@
 <div id="content">
     <?php
     if (isset($_POST['submit'])) {
+        $pathConfig = './config/image.json';
+
         // Count total files
         $countfiles = count($_FILES['file']['name']);
 
@@ -23,7 +25,7 @@
 
             // Upload file
             if (move_uploaded_file($_FILES['file']['tmp_name'][$i], 'img/gallery/' . $filename)) {
-                $jsonString = file_get_contents('config/image.json');
+                $jsonString = file_get_contents($pathConfig);
                 $data = json_decode($jsonString, true);
 
                 array_push($data['images'],
@@ -34,7 +36,7 @@
                     ]);
 
                 $newJsonString = json_encode($data);
-                file_put_contents('./config/image.json', $newJsonString);
+                file_put_contents($pathConfig, $newJsonString);
             }
 
         }
