@@ -13,6 +13,7 @@
 <div w3-include-html="small-banner.html"></div>
 <div id="content">
     <?php
+	include '../config.php';
     if (isset($_POST['submit'])) {
         $pathConfig = './config/image.json';
 
