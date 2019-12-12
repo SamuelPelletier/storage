@@ -13,7 +13,7 @@ function fillGallery() {
         }
         var numberOfImages = data.images.length
         $.each(data.images, function (i) {
-            var elem = data.images[numberOfImages-i-1];
+            var elem = data.images[numberOfImages - i - 1];
             if (elem.tags.includes(prefectureParam) || prefectureParam == null) {
                 $('.imageGallery1').append("<div class='col-lg-3 col-md-4 col-sm-6 " + elem.tags.join(" ") + "'>" +
                     "                <div class='h_gallery_item'>" +
@@ -26,10 +26,6 @@ function fillGallery() {
                     "            </div>")
             }
         });
-        if ($(".h_gallery_item img").length === 0) {
-            $(".imageGallery1").replaceWith("<p>Il n'y a pas encore de photos sur cette préfecture :(</p>" +
-                "<p>Retourner à la <a href='map.html'>carte</a> ou à la <a href='gallery.html'>gallerie</a>.</p>")
-        }
     });
 }
 

@@ -36,6 +36,9 @@
                     ]);
 
                 $newJsonString = json_encode($data);
+                if ($backup) {
+                    copy('img/gallery/' . $filename, $backupPath . $filename);
+                }
                 file_put_contents($pathConfig, $newJsonString);
             }
 
