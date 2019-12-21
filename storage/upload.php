@@ -13,7 +13,7 @@
 <div w3-include-html="small-banner.html"></div>
 <div id="content">
     <?php
-	include '../config.php';
+    include '../config.php';
     if (isset($_POST['submit'])) {
         $pathConfig = './config/image.json';
 
@@ -37,13 +37,11 @@
                     ]);
 
                 $newJsonString = json_encode($data);
-                if ($backup) {
-                    copy('img/gallery/' . $filename, $backupPath . $filename);
-                }
                 file_put_contents($pathConfig, $newJsonString);
             }
 
         }
+        echo "Les images ont été correctement envoyé !";
     }
     ?>
     <form id='upload-form' method='post' action='./upload.php' enctype='multipart/form-data'>
