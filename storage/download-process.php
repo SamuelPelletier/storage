@@ -19,7 +19,7 @@ if (isset($_GET['param']) && isset($_GET['type'])) {
     header('Content-Description: File Transfer');
     header('Content-Type: application/zip');
     header('Content-Disposition: attachment;filename="' . $zipName . '"');
-    header('Content-Length: ' . filesize($zipName));
+    header('Content-Length: ' . filesize($zipPath));
     header('Expires: 0');
     header('Cache-Control: must-revalidate');
     header('Pragma: public');
