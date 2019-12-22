@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png" type="image/png">
-    <title>Déposer des images</title>
+    <title>Déposer des images en vrac</title>
     <div w3-include-html="css.html"></div>
 </head>
 <body>
 <div w3-include-html="menu.html"></div>
 <div w3-include-html="small-banner.html"></div>
 <div id="content">
-    <h1>Déposer des images</h1>
+    <h1>Déposer des images en vrac</h1>
     <?php
     include '../config.php';
     if (isset($_POST['submit'])) {
@@ -27,7 +27,7 @@
 
             $counter = 1;
             while (file_exists('./img/gallery/' . $filename)) {
-                $filename = pathinfo($filename)['basename'] . $counter . pathinfo($filename)['extension'];
+                $filename = pathinfo($filename)['filename'] . $counter . '.' . pathinfo($filename)['extension'];
                 $counter++;
             }
 
@@ -38,10 +38,10 @@
 
                 array_push($data['images'],
                     [
-                        'title' => $_POST['title' . $i],
+                        'title' => $filename,
                         "url" => 'img/gallery/' . $filename,
                         'owner' => $_SESSION['user'],
-                        'tags' => $_POST['tags' . $i]
+                        'tags' => ['vrac']
                     ]);
 
                 $newJsonString = json_encode($data);
@@ -52,7 +52,7 @@
         echo "Les images ont été correctement envoyé !";
     }
     ?>
-    <form id='upload-form' method='post' action='./upload.php' enctype='multipart/form-data'>
+    <form id='upload-massive-form' method='post' action='./upload-massive.php' enctype='multipart/form-data'>
         <input type="file" name="file[]" id="file" multiple accept=".gif,.jpg,.jpeg,.png">
 
         <input type='submit' name='submit' value='Suivant'>
@@ -61,6 +61,5 @@
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/autoloader.js"></script>
-<script src="js/upload.js"></script>
 </body>
 </html>

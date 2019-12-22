@@ -1,3 +1,4 @@
 config.php
 storage/img/gallery/
 storage/config/image.json
+storage/download/
