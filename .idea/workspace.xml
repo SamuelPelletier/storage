@@ -4,14 +4,6 @@
     <list default="true" id="13fa0468-94b7-46f7-b454-d3c9cdd01136" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/config/folder.json" beforeDir="false" afterPath="$PROJECT_DIR$/storage/config/folder.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/storage/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/storage/img/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/img/find-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/js/autoloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/storage/js/autoloader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/js/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/storage/js/gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/storage/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/upload.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage/js/gallery.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
@@ -53,6 +45,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
               <caret line="5" column="61" lean-forward="true" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -84,11 +85,11 @@
         <option value="$PROJECT_DIR$/storage/js/gallery.js" />
         <option value="$PROJECT_DIR$/storage/download.php" />
         <option value="$PROJECT_DIR$/storage/download-process.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/storage/upload.php" />
         <option value="$PROJECT_DIR$/storage/upload-massive.php" />
         <option value="$PROJECT_DIR$/storage/config/image.json" />
         <option value="$PROJECT_DIR$/storage/content.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -120,19 +121,7 @@
               <item name="storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
               <item name="download" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,12 +168,12 @@
       <workItem from="1576147640566" duration="2042000" />
       <workItem from="1576790070019" duration="23000" />
       <workItem from="1576921464585" duration="2554000" />
-      <workItem from="1577012095022" duration="8513000" />
+      <workItem from="1577012095022" duration="8827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21830000" />
+    <option name="totallyTimeSpent" value="22144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -321,13 +310,6 @@
     <entry file="file://$PROJECT_DIR$/storage/download/.htaccess">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/download-process.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -374,6 +356,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="11" column="101" selection-start-line="11" selection-start-column="101" selection-end-line="11" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
