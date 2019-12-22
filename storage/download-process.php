@@ -8,7 +8,7 @@ if (isset($_GET['param']) && isset($_GET['type'])) {
     $zipPath = './download/' . $zipName;
     $files = array();
     $zip = new \ZipArchive();
-    $zip->open($zipPath, \ZipArchive::CREATE);
+    $zip->open($zipPath, \ZipArchive::OVERWRITE);
     foreach ($data['images'] as $image) {
         if (($_GET['type'] == "owner" && $image['owner'] == $_GET['param']) || ($_GET['type'] == "tag" && in_array($_GET['param'],
                     $image['tags'])) || $_GET['param'] == 'all') {
