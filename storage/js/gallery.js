@@ -37,8 +37,9 @@ function fillGallery() {
             var elem = data.images[numberOfImages - i - 1];
             if ((elem.year === year || year == null) && (elem.owner === owner || owner == null) && !elem.tags.includes("deleted")) {
                 counter++;
+                var deleteButton = "<div class='remove-button'><span  class='fa fa-trash' onclick='remove(\"" + elem.url + "\"," + i + ")'></span></div>";
                 $('.imageGallery1').append("<div id='image" + i + "' class='col-lg-3 col-md-4 col-sm-6 " + elem.tags.join(" ") + "'>" +
-                    "                <div class='remove-button'><span  class='fa fa-trash' onclick='remove(\"" + elem.url + "\"," + i + ")'></span></div>" +
+                    deleteButton +
                     "                <div class='h_gallery_item'>" +
                     "                    <img src='" + elem.url + "' alt=''>" +
                     "                    <div class='hover'>" +
