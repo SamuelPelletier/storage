@@ -13,13 +13,45 @@ $.ajax
     }
 });
 
+function urlParam(name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    return results == null ? null : results[1];
+}
+
 $(document).ready(function () {
     var checkGalleryExist = setInterval(function () {
         if ($('.gallery_filter').length) {
+            clearInterval(checkGalleryExist);
             $.each(folderList, function (index) {
                 $('.gallery_filter').append("<li data-filter='." + folderList[index] + "'><a href=\"#\">" + folderList[index].toUpperCase() + "</a></li>");
             });
-            clearInterval(checkGalleryExist);
+
+            var year = urlParam('year');
+
+            for (var i = 1900; i < 2099; i++) {
+                if (year != null && year == i) {
+                    $('#select-year').append('<option selected value="' + i + '">' + i + '</option>');
+                } else {
+                    $('#select-year').append('<option value="' + i + '">' + i + '</option>');
+                }
+
+            }
+
+            $('#select-year').on('change', function () {
+                var url = new URL(window.location.href);
+
+                var query_string = url.search;
+
+                var search_params = new URLSearchParams(query_string);
+
+                search_params.delete('year');
+
+                search_params.append('year', $(this).val());
+
+                url.search = search_params.toString();
+
+                window.location.href = url.toString();
+            });
         }
     }, 100); // check every 100ms
     if (filename.indexOf('gallery') >= 0) {

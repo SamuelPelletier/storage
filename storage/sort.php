@@ -19,8 +19,8 @@
         $pathConfig = './config/image.json';
 
         // Count total files
-        // -1 for submit and 4 because 4 input by image
-        $countfiles = (count($_POST) - 1) / 4;
+        // -1 for submit and 5 because 5 input by image
+        $countfiles = (count($_POST) - 1) / 5;
 
         // Looping all files
         for ($i = 0; $i < $countfiles; $i++) {
@@ -29,6 +29,7 @@
             for ($y = 0; $y < count($data['images']); $y++) {
                 if ($data['images'][$y]['url'] === $_POST['url' . $i]) {
                     $data['images'][$y]['title'] = $_POST['title' . $i];
+                    $data['images'][$y]['year'] = $_POST['year' . $i];
                     if (isset($_POST['tags' . $i]) && count($_POST['tags' . $i]) > 0) {
                         $data['images'][$y]['tags'] = $_POST['tags' . $i];
                     }

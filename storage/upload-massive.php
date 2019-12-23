@@ -14,6 +14,9 @@
 <div id="content">
     <h1>Déposer des photos en vrac</h1>
     <?php
+    error_reporting(E_ALL);
+    ini_set("display_errors", 1);
+    ini_set("memory_limit", "1024M");
     include '../config.php';
     if (isset($_POST['submit'])) {
         $pathConfig = './config/image.json';
@@ -23,31 +26,22 @@
 
         // Looping all files
         for ($i = 0; $i < $countfiles; $i++) {
-            $filename = $_FILES['file']['name'][$i];
-
-            $counter = 1;
-            while (file_exists('./img/gallery/' . $filename)) {
-                $filename = pathinfo($filename)['filename'] . $counter . '.' . pathinfo($filename)['extension'];
-                $counter++;
-            }
-
+            $newFileName = date("YmdHis") . $i . '.' . pathinfo($_FILES['file']['name'][$i], PATHINFO_EXTENSION);
             // Upload file
-            if (move_uploaded_file($_FILES['file']['tmp_name'][$i], 'img/gallery/' . $filename)) {
+            if (move_uploaded_file($_FILES['file']['tmp_name'][$i], 'img/gallery/' . $newFileName)) {
                 $jsonString = file_get_contents($pathConfig);
                 $data = json_decode($jsonString, true);
-
                 array_push($data['images'],
                     [
-                        'title' => $filename,
-                        "url" => 'img/gallery/' . $filename,
+                        'title' => $newFileName,
+                        'year' => date("Y"),
+                        "url" => 'img/gallery/' . $newFileName,
                         'owner' => $_SESSION['user'],
                         'tags' => ['vrac']
                     ]);
-
                 $newJsonString = json_encode($data);
                 file_put_contents($pathConfig, $newJsonString);
             }
-
         }
         echo "Les photos ont été correctement envoyé !";
     }

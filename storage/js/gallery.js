@@ -22,15 +22,23 @@ function fillGallery() {
         var counter = 0;
         var numberOfImages = data.images.length;
         var owner = urlParam("owner");
+        var year = urlParam("year");
+        var text = '';
+        if (year != null) {
+            text += year;
+        }
         if (owner != null) {
-            $('#content').prepend('<h1>Photos de ' + owner.charAt(0).toUpperCase() + owner.slice(1));
+            text += ' de ' + owner.charAt(0).toUpperCase() + owner.slice(1);
+        }
+        if (text !== '') {
+            $('#content').prepend('<h1>Photos ' + text);
         }
         $.each(data.images, function (i) {
             var elem = data.images[numberOfImages - i - 1];
-            if ((elem.owner === owner || owner == null) && !elem.tags.includes("deleted")) {
+            if ((elem.year === year || year == null) && (elem.owner === owner || owner == null) && !elem.tags.includes("deleted")) {
                 counter++;
                 $('.imageGallery1').append("<div id='image" + i + "' class='col-lg-3 col-md-4 col-sm-6 " + elem.tags.join(" ") + "'>" +
-                    "                <div><span class='remove-button' onclick='remove(\"" + elem.url + "\"," + i + ")'>X</span></div>" +
+                    "                <div class='remove-button'><span  class='fa fa-trash' onclick='remove(\"" + elem.url + "\"," + i + ")'></span></div>" +
                     "                <div class='h_gallery_item'>" +
                     "                    <img src='" + elem.url + "' alt=''>" +
                     "                    <div class='hover'>" +

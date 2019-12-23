@@ -27,7 +27,7 @@ form.submit(function (e) {
             for (var i = 0; i < field.files.length; i++) {
                 var inputFolderListTemp = "<select multiple name='tags" + i + "[]' required>" + inputFolderList;
                 const file = field.files[i];
-                form.append('<div class="image-form row"><img class="image-preview col-2" src="' + URL.createObjectURL(file) + '"><div class="col-10"><div class="row"><p>Nom :</p><input name="title' + i + '" type="text" value="' + file.name.split('.').slice(0, -1).join('.') + '" required></div><div class="row"><p>Dossier :</p>' + inputFolderListTemp + '</div></div></div>')
+                form.append('<div class="image-form row"><img class="image-preview col-2" src="' + URL.createObjectURL(file) + '"><div class="col-10"><div class="row"><p>Nom :</p><input name="title' + i + '" type="text" value="' + file.name.split('.').slice(0, -1).join('.') + '" required></div><div class="row"><p>Année : </p><input type="number" name="year' + i + '" min="1900" max="2099" step="1" value="' + new Date().getFullYear() + '" required/></div><div class="row"><p>Dossier :</p>' + inputFolderListTemp + '</div></div></div>')
             }
         });
     }

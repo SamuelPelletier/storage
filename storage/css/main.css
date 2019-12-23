@@ -25,27 +25,53 @@
     max-width: 200px;
 }
 
-#upload-form {
+#upload-form, #sort-form {
     padding-top: 10px;
 }
 
-#upload-form > div {
+#upload-form > div, #sort-form > div {
     padding: 10px;
 }
 
-#upload-form input {
+#upload-form input, #sort-form input {
     padding-left: 10px;
 }
 
-#upload-form p {
+#upload-form p, #sort-form p {
     padding-right: 10px;
 }
 
-#upload-form .col-10 .row {
+#upload-form .col-10 .row, #sort-form .col-10 .row {
     padding: 10px;
 }
 
 .remove-button {
+    background-color: #ff0000;
+    width: 20px;
+    height: 20px;
+    border-radius: 0 0 100% 100%;
+    position: absolute;
     z-index: 100;
+}
+
+.remove-button > span {
     cursor: pointer;
+    color: white;
+    left: 5px;
+    top: -2px;
+    position: relative;
+}
+
+.select-year {
+    left: 60px;
+    position: absolute;
+    display: inline-flex;
+}
+
+.select-year p {
+    font-weight: 600;
+}
+
+.select-year select {
+    padding: 0 10px;
 }
