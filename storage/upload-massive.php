@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png" type="image/png">
-    <title>Déposer des images en vrac</title>
+    <title>Déposer des photos en vrac</title>
     <div w3-include-html="css.html"></div>
 </head>
 <body>
 <div w3-include-html="menu.html"></div>
 <div w3-include-html="small-banner.html"></div>
 <div id="content">
-    <h1>Déposer des images en vrac</h1>
+    <h1>Déposer des photos en vrac</h1>
     <?php
     include '../config.php';
     if (isset($_POST['submit'])) {
@@ -49,7 +49,7 @@
             }
 
         }
-        echo "Les images ont été correctement envoyé !";
+        echo "Les photos ont été correctement envoyé !";
     }
     ?>
     <form id='upload-massive-form' method='post' action='./upload-massive.php' enctype='multipart/form-data'>

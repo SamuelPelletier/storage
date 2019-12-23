@@ -44,3 +44,8 @@
 #upload-form .col-10 .row {
     padding: 10px;
 }
+
+.remove-button {
+    z-index: 100;
+    cursor: pointer;
+}

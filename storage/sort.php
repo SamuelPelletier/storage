@@ -38,7 +38,7 @@
             file_put_contents($pathConfig, $newJsonString);
         }
 
-        echo "Les images ont été correctement envoyé !";
+        echo "Les photos ont été correctement envoyé !";
     }
     ?>
     <form id='sort-form' method='post' action='./sort.php' enctype='multipart/form-data'>

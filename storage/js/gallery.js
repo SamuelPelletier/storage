@@ -3,6 +3,20 @@ function urlParam(name) {
     return results == null ? null : results[1];
 }
 
+function remove(imageUrl, index) {
+    $.ajax({
+        url: 'delete-process.php',
+        type: 'POST',
+        data: {url: imageUrl, index: index},
+        success: function (data) {
+            $('.imageGallery1').isotope('remove', $('#image' + index));
+            $('.imageGallery1').isotope({
+                filter: $('.gallery_filter').find(".active").data('filter')
+            });
+        }
+    });
+}
+
 function fillGallery() {
     $.getJSON("config/image.json", function (data) {
         var counter = 0;
@@ -13,9 +27,10 @@ function fillGallery() {
         }
         $.each(data.images, function (i) {
             var elem = data.images[numberOfImages - i - 1];
-            if (elem.owner === owner || owner == null) {
+            if ((elem.owner === owner || owner == null) && !elem.tags.includes("deleted")) {
                 counter++;
-                $('.imageGallery1').append("<div class='col-lg-3 col-md-4 col-sm-6 " + elem.tags.join(" ") + "'>" +
+                $('.imageGallery1').append("<div id='image" + i + "' class='col-lg-3 col-md-4 col-sm-6 " + elem.tags.join(" ") + "'>" +
+                    "                <div><span class='remove-button' onclick='remove(\"" + elem.url + "\"," + i + ")'>X</span></div>" +
                     "                <div class='h_gallery_item'>" +
                     "                    <img src='" + elem.url + "' alt=''>" +
                     "                    <div class='hover'>" +

@@ -10,11 +10,14 @@ if (isset($_GET['param']) && isset($_GET['type'])) {
     $zip = new \ZipArchive();
     $zip->open($zipPath, \ZipArchive::CREATE);
     foreach ($data['images'] as $image) {
-        if (($_GET['type'] == "owner" && $image['owner'] == $_GET['param']) || ($_GET['type'] == "tag" && in_array($_GET['param'],
-                    $image['tags'])) || $_GET['param'] == 'all') {
-            $zip->addFromString(basename($image['title']), file_get_contents($image['url']));
+        if (!in_array('deleted', $image['tags'])) {
+            if (($_GET['type'] == "owner" && $image['owner'] == $_GET['param']) || ($_GET['type'] == "tag" && in_array($_GET['param'],
+                        $image['tags'])) || $_GET['param'] == 'all') {
+                $zip->addFromString(basename($image['title']), file_get_contents($image['url']));
+            }
         }
     }
+
     $zip->close();
     header('Content-Description: File Transfer');
     header('Content-Type: application/zip');
