@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13fa0468-94b7-46f7-b454-d3c9cdd01136" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/storage/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/storage/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/storage/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/download.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/download.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/js/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/storage/js/gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/storage/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/js/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/storage/js/sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/delete-process.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/delete-process.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +30,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/storage/delete-process.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="16" column="14" selection-end-line="23" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/download-process.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
               <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
@@ -49,15 +53,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
               <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -80,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage/js/sort.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="33" column="22" selection-end-line="40" />
+            <state relative-caret-position="544">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -135,13 +130,13 @@
         <option value="$PROJECT_DIR$/storage/upload-massive.php" />
         <option value="$PROJECT_DIR$/storage/upload.php" />
         <option value="$PROJECT_DIR$/storage/config/image.json" />
-        <option value="$PROJECT_DIR$/storage/delete-process.php" />
         <option value="$PROJECT_DIR$/storage/js/gallery.js" />
         <option value="$PROJECT_DIR$/storage/content.html" />
         <option value="$PROJECT_DIR$/storage/js/main.js" />
         <option value="$PROJECT_DIR$/storage/css/main.css" />
         <option value="$PROJECT_DIR$/storage/download.php" />
         <option value="$PROJECT_DIR$/storage/js/sort.js" />
+        <option value="$PROJECT_DIR$/storage/delete-process.php" />
       </list>
     </option>
   </component>
@@ -215,12 +210,12 @@
       <workItem from="1576790070019" duration="23000" />
       <workItem from="1576921464585" duration="2554000" />
       <workItem from="1577012095022" duration="11618000" />
-      <workItem from="1577092430838" duration="11420000" />
+      <workItem from="1577092430838" duration="11457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36355000" />
+    <option name="totallyTimeSpent" value="36392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -328,13 +323,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/download-process.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/sort.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -363,13 +351,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/upload-massive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="42" column="63" lean-forward="true" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -377,22 +358,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/delete-process.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/index.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/storage/js/gallery.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -424,8 +391,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/storage/js/sort.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="33" column="22" selection-end-line="40" />
+        <state relative-caret-position="544">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/upload-massive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="42" column="63" lean-forward="true" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/download-process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/delete-process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="14" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
