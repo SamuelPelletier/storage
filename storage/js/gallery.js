@@ -23,6 +23,7 @@ function fillGallery() {
         var numberOfImages = data.images.length;
         var owner = urlParam("owner");
         var year = urlParam("year");
+        var maxImage = urlParam("max");
         var text = '';
         if (year != null) {
             text += year;
@@ -49,10 +50,14 @@ function fillGallery() {
                     "                </div>" +
                     "            </div>");
             }
+            if (maxImage != null && counter >= maxImage) {
+                return false;
+            }
         });
         if (counter === 0) {
             $('.imageGallery1').append("<p>Il n'y a pas encore de photo</p>");
         }
+
     });
 }
 

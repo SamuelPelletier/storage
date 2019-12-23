@@ -27,6 +27,7 @@ $(document).ready(function () {
             });
 
             var year = urlParam('year');
+            var max = urlParam('max');
 
             for (var i = 1900; i < 2099; i++) {
                 if (year != null && year == i) {
@@ -36,6 +37,14 @@ $(document).ready(function () {
                 }
 
             }
+
+            $.each([10, 20, 50, 100, 200, 500], function (x, y) {
+                if (max != null && year === y) {
+                    $('#select-max').append('<option selected value="' + y + '">' + y + '</option>');
+                } else {
+                    $('#select-max').append('<option value="' + y + '">' + y + '</option>');
+                }
+            });
 
             $('#select-year').on('change', function () {
                 var url = new URL(window.location.href);
@@ -47,6 +56,22 @@ $(document).ready(function () {
                 search_params.delete('year');
 
                 search_params.append('year', $(this).val());
+
+                url.search = search_params.toString();
+
+                window.location.href = url.toString();
+            });
+
+            $('#select-max').on('change', function () {
+                var url = new URL(window.location.href);
+
+                var query_string = url.search;
+
+                var search_params = new URLSearchParams(query_string);
+
+                search_params.delete('max');
+
+                search_params.append('max', $(this).val());
 
                 url.search = search_params.toString();
 

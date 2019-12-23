@@ -68,10 +68,16 @@
     display: inline-flex;
 }
 
-.select-year p {
+.select-max {
+    left: 230px;
+    position: absolute;
+    display: inline-flex;
+}
+
+.select-year p, .select-max p {
     font-weight: 600;
 }
 
-.select-year select {
+.select-year select, .select-max select {
     padding: 0 10px;
 }

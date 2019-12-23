@@ -29,7 +29,7 @@
     $data = json_decode($jsonString, true);
 
     echo "<ul>";
-    echo "<li><a href='download-process.php?type=tag&param=all'>Tous</a></li>";
+    //echo "<li><a href='download-process.php?type=tag&param=all'>Tous</a></li>";
     foreach ($data['folders'] as $folderName) {
         echo "<li><a href='download-process.php?type=tag&param=" . $folderName . "'>" . ucfirst($folderName) . "</a></li>";
     }
