@@ -57,7 +57,6 @@ function fillGallery() {
         if (counter === 0) {
             $('.imageGallery1').append("<p>Il n'y a pas encore de photo</p>");
         }
-
     });
 }
 
