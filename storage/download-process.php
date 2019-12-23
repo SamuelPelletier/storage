@@ -8,7 +8,7 @@ if (isset($_GET['param']) && isset($_GET['type'])) {
     $zipPath = './download/' . $zipName;
     $files = array();
     $zip = new \ZipArchive();
-    $zip->open($zipPath, \ZipArchive::CREATE);
+    $zip->open($zipPath, \ZipArchive::OVERWRITE);
     foreach ($data['images'] as $image) {
         if (!in_array('deleted', $image['tags'])) {
             if (($_GET['type'] == "owner" && $image['owner'] == $_GET['param']) || ($_GET['type'] == "tag" && in_array($_GET['param'],
@@ -22,7 +22,7 @@ if (isset($_GET['param']) && isset($_GET['type'])) {
     header('Content-Description: File Transfer');
     header('Content-Type: application/zip');
     header('Content-Disposition: attachment;filename="' . $zipName . '"');
-    header('Content-Length: ' . filesize($zipName));
+    header('Content-Length: ' . filesize($zipPath));
     header('Expires: 0');
     header('Cache-Control: must-revalidate');
     header('Pragma: public');
