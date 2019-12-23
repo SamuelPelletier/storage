@@ -71,8 +71,9 @@ $(document).ready(function () {
 
                 search_params.delete('max');
 
-                search_params.append('max', $(this).val());
-
+                if ($(this).val() !== '') {
+                    search_params.append('max', $(this).val());
+                }
                 url.search = search_params.toString();
 
                 window.location.href = url.toString();
