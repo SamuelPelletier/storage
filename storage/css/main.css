@@ -62,22 +62,33 @@
     position: relative;
 }
 
-.select-year {
-    left: 60px;
-    position: absolute;
-    display: inline-flex;
-}
-
 .select-max {
-    left: 230px;
+    left: 200px;
     position: absolute;
     display: inline-flex;
 }
 
-.select-year p, .select-max p {
+.select-max p {
     font-weight: 600;
 }
 
-.select-year select, .select-max select {
-    padding: 0 10px;
+.select-max select {
+    padding: 0 2px;
+}
+
+#year {
+    border: 0;
+    color: #f6931f;
+    font-weight: bold;
+    width: 76px;
+    margin: 0 10px;
+}
+
+.range-year {
+    padding-bottom: 24px;
+}
+
+.p_40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }

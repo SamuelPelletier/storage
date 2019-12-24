@@ -26,17 +26,7 @@ $(document).ready(function () {
                 $('.gallery_filter').append("<li data-filter='." + folderList[index] + "'><a href=\"#\">" + folderList[index].toUpperCase() + "</a></li>");
             });
 
-            var year = urlParam('year');
             var max = urlParam('max');
-
-            for (var i = 1900; i < 2099; i++) {
-                if (year != null && year == i) {
-                    $('#select-year').append('<option selected value="' + i + '">' + i + '</option>');
-                } else {
-                    $('#select-year').append('<option value="' + i + '">' + i + '</option>');
-                }
-
-            }
 
             $.each([10, 20, 50, 100, 200, 500], function (x, y) {
                 if (max != null && max == y) {
@@ -46,21 +36,48 @@ $(document).ready(function () {
                 }
             });
 
-            $('#select-year').on('change', function () {
-                var url = new URL(window.location.href);
+            var yearNow = new Date().getFullYear();
 
-                var query_string = url.search;
 
-                var search_params = new URLSearchParams(query_string);
+            var yearMin = urlParam('yearMin');
+            var yearMax = urlParam('yearMax');
 
-                search_params.delete('year');
+            if (yearMin == null) {
+                yearMin = 1900;
+            }
 
-                search_params.append('year', $(this).val());
+            if (yearMax == null) {
+                yearMin = yearNow;
+            }
 
-                url.search = search_params.toString();
+            $("#slider-range").slider({
+                range: true,
+                min: 1900,
+                max: yearNow,
+                values: [yearMin, yearMax],
+                slide: function (event, ui) {
+                    $("#year").val(ui.values[0] + ' - ' + ui.values[1]);
+                },
+                change: function (event, ui) {
+                    var url = new URL(window.location.href);
 
-                window.location.href = url.toString();
+                    var query_string = url.search;
+
+                    var search_params = new URLSearchParams(query_string);
+
+                    search_params.delete('yearMax');
+                    search_params.delete('yearMin');
+
+                    search_params.append('yearMin', ui.values[0]);
+                    search_params.append('yearMax', ui.values[1]);
+
+                    url.search = search_params.toString();
+
+                    window.location.href = url.toString();
+                }
             });
+            $("#year").val($("#slider-range").slider("values", 0) +
+                " - " + $("#slider-range").slider("values", 1));
 
             $('#select-max').on('change', function () {
                 var url = new URL(window.location.href);
