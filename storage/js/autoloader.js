@@ -33,6 +33,7 @@ function includeHTML() {
 includeHTML();
 
 
+$.getScript("vendors/jquery-ui/jquery-ui.js");
 $.getScript("js/popper.js");
 $.getScript("js/bootstrap.min.js");
 $.getScript("js/stellar.js");
@@ -46,5 +47,4 @@ $.getScript("js/jquery.ajaxchimp.min.js");
 $.getScript("js/mail-script.js");
 $.getScript("js/theme.js");
 $.getScript("js/gallery.js");
-$.getScript("vendors/jquery-ui/jquery-ui.js");
 $.getScript("js/main.js");
